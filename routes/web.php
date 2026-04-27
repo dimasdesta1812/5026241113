@@ -44,6 +44,10 @@ Route::get('tugasbootstrap', function () {
 	return view('tugasbootstrap');
 });
 
+Route::get('main', function () {
+	return view('main');
+});
+
 Route::get('dosen', [DosenController::class, 'index']);
 
 Route::get('biodata', [DosenController::class, 'biodata']);
