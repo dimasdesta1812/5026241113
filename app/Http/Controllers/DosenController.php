@@ -15,6 +15,6 @@ class DosenController extends Controller
     	    	$nama = "Dimas Ananda D";
                 $umur = 17;
                 $pelajaran = ["Algoritma & Pemrograman","Kalkulus","Pemrograman Web"];
-    	return view('biodata',['nama' => $nama, 'umur' => $umur, 'matkul' => $pelajaran]);
+    	return view('biodata',['nama' => $nama, 'umur' => $umur, 'matkul' => $pelajaran]); 
     }
 }
