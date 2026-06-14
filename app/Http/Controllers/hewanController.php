@@ -19,13 +19,13 @@ class HewanController extends Controller
     }
 
     public function store(Request $request)
-    {
-        DB::table('hewan')->insert([
-            'namahewan'   => $request->namahewan,
-            'jumlahhewan' => $request->jumlahhewan,
-            'tersedia'    => $request->tersedia,
-        ]);
+{
+    DB::table('hewan')->insert([
+        'namahewan'   => $request->namahewan,
+        'jumlahhewan' => $request->jumlahhewan,
+        'tersedia'    => $request->tersedia,
+    ]);
 
-        return redirect('/hewan');
-    }
+    return redirect('/hewan');
+}
 }

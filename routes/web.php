@@ -5,6 +5,9 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\nilaikuliahController;
+use App\Http\Controllers\hewanController;
 
 Route::get('/', function () {
 
@@ -70,4 +73,20 @@ Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
-Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']); 
+Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+//route Keranjang Belanja
+Route::get('/keranjang', [KeranjangController::class, 'index']);
+Route::get('/keranjang/tambah', [KeranjangController::class, 'create']);
+Route::post('/keranjang/simpan', [KeranjangController::class, 'store']);
+Route::delete('/keranjang/hapus/{id}', [KeranjangController::class, 'destroy']);
+
+//route Nilai Kuliah
+Route::get('/nilaikuliah', [nilaikuliahController::class, 'index']);
+Route::get('/nilaikuliah/tambah', [nilaikuliahController::class, 'create']);
+Route::post('/nilaikuliah/simpan', [nilaikuliahController::class, 'store']);
+
+// route Hewan
+Route::get('/hewan', [hewanController::class, 'index'])->name('hewan');
+Route::get('/hewan/tambah', [hewanController::class, 'create'])->name('tambahhewan');
+Route::post('/hewan/simpan', [hewanController::class, 'store'])->name('simpanhewan');
