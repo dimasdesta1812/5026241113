@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\nilaikuliahController;
 use App\Http\Controllers\hewanController;
+use App\Http\Controllers\mykaryawanController;
 
 Route::get('/', function () {
 
@@ -90,3 +91,7 @@ Route::post('/nilaikuliah/simpan', [nilaikuliahController::class, 'store']);
 Route::get('/hewan', [hewanController::class, 'index'])->name('hewan');
 Route::get('/hewan/tambah', [hewanController::class, 'create'])->name('tambahhewan');
 Route::post('/hewan/simpan', [hewanController::class, 'store'])->name('simpanhewan');
+
+//routte mykaryawan
+Route::get('/eas', [mykaryawanController::class, 'index'])->name('eas');
+Route::get('/eas/{kodepegawai}', [mykaryawanController::class, 'show'])->name('viewmykaryawan');

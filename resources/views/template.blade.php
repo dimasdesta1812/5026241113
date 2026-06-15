@@ -33,7 +33,7 @@
                         <a class="nav-link" href="/hewan">PR 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/mykaryawan">EAS</a>
                     </li>
                 </ul>
             </div>
